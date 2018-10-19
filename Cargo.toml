@@ -1,0 +1,7 @@
+[package]
+name = "Trensoo"
+version = "0.1.0"
+authors = ["Praying <qurandeyouxiang@qq.com>"]
+edition = "2018"
+
+[dependencies]
