@@ -1,7 +1,26 @@
 [package]
-name = "Trensoo"
+name = "trensoo"
 version = "0.1.0"
 authors = ["Praying <qurandeyouxiang@qq.com>"]
 edition = "2018"
 
+
+[lib]
+name = "protos"
+path = "src/protos/mod.rs"
+
+[[bin]]
+name="server"
+path="src/server.rs"
+
+[[bin]]
+name="client"
+path="src/client.rs"
+
 [dependencies]
+grpcio = { version = "0.4", default-features = false, features = ["protobuf-codec"] }
+futures = "0.1.16"
+protobuf = "~2"
+
+[build-dependencies]
+protoc-grpcio = "1.0.2"
